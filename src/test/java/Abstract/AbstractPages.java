@@ -1,0 +1,66 @@
+package Abstract;
+
+public class AbstractPages extends AbstractTest {
+
+	// CAMPOS TELA INCLUSÃO DE USUÁRIO
+	public static void escreveCampoNome(String nome) {
+		escreveEmElemento(xPaths.campoNome, nome);
+	}
+
+	public static void escrevecampoUltimoNome(String ultimonome) {
+		escreveEmElemento(xPaths.campoUltimoNome, ultimonome);
+	}
+
+	public static void escrevecampoEmail(String email) {
+		escreveEmElemento(xPaths.campoEmail, email);
+	}
+
+	public static void escrevecampoEndereco(String endereco) {
+		escreveEmElemento(xPaths.campoEndereco, endereco);
+	}
+
+	public static void escrevecampoUniversidade(String universidade) {
+		escreveEmElemento(xPaths.campoUniversidade, universidade);
+	}
+
+	public static void escrevecampoProfissao(String profissao) {
+		escreveEmElemento(xPaths.campoProfissao, profissao);
+	}
+
+	public static void escrevecampoGenero(String genero) {
+		escreveEmElemento(xPaths.campoGenero, genero);
+	}
+
+	public static void escrevecampoIdade(String idade) {
+		escreveEmElemento(xPaths.campoIdade, idade);
+	}
+
+	// MENU/SUBMENU
+	public static String clicarMenuFormulario() {
+		return clicaEmElemento(xPaths.menuFormulario);
+	}
+
+	public static String clicarSubMenuCriarUsuario() {
+		return clicaEmElemento(xPaths.subMenuCriarUsuario);
+	}
+
+	// RadioButton
+
+	public static void clicarRadio01() {
+		clicaEmElemento(xPaths.radio01);
+	}
+
+	public String lerMensagemSistema() throws Exception {
+		try {
+			return lerValorElemento(xPaths.popUpMensagemSistema);
+		} catch (Exception e) {
+			throw new Exception("Erro em captura de mensagem em pop-up do sistema", e);
+		}
+	}
+
+	public String lerValorElemento(xPaths popupmensagemsistema) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
