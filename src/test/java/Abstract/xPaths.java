@@ -11,6 +11,7 @@ public enum xPaths {
 	menuBuscaElemento("/html/body/div[2]/div[1]/ul/li[2]/a"),
 	subMenuRadioCheckbox("/html/body/div[2]/div[1]/ul/li[2]/div/ul/li[4]/a"),
 	subMenuDropSelect("/html/body/div[2]/div[1]/ul/li[2]/div/ul/li[5]/a"),
+	
 	// CAMPOS DA TELA DE INCLUSÃO DE USUÁRIO
 	campoLocalidade("//*[@id=\"Geral\"]/div/div/span[3]/label/input"), campoNome("//*[@id=\"user_name\"]"),
 	campoUltimoNome("//*[@id=\"user_lastname\"]"), campoEmail("//*[@id=\"user_email\"]"),
@@ -37,11 +38,12 @@ public enum xPaths {
 	popUpMensagemSistema("//*[@id='messageContainer_1']/ul/ul/div"),
 	popUpFechaMensagemSistema("//*[@id='messageContainer_1']/button/span/i"),
 
-// MODAL SISTEMA
+	// MODAL SISTEMA
 	botaoModalSim("//a[text()='Sim' and not(ancestor::div[contains(@style,'display: none') or @hidden])]"),
 	botaoModalNao("//a[text()='Não' and not(ancestor::div[contains(@style,'display: none') or @hidden])]"),
 	botaoModalCancelar("//a[text()='Cancelar' and not(ancestor::div[contains(@style,'display: none') or @hidden])]"),
-// CAMPOS GENÉRICOS
+	
+	// CAMPOS GENÉRICOS
 	campoCPF("//input[@fecmaskcpf]"), campoCNPJ("//input[@fecmaskcnpj]"), campoConta("//input[@fecmaskcontansgd]"),
 	campoAgencia("//input[@fecmasknumber]"), botaoLimpar("//*[@id=\"acoesConsultarProposta\"]/a[2]"),
 

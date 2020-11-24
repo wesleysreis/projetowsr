@@ -15,35 +15,34 @@ public class ManterUsuario extends AbstractPages {
 	private static final String URL = "http://automacaocombatista.herokuapp.com/treinamento/home";
 	private static final Boolean MAXIMIZE = Boolean.TRUE;
 	public static String localidade;
-	
+
 	@BeforeClass
 	public static void setUpClass() throws Exception {
-	
+
 		// CHROME
 		System.setProperty("webdriver.chrome.driver", "c:\\Desenvolvimento\\Drives\\chromedriver.exe");
-		
+
 		ChromeOptions options = new ChromeOptions();
 		driver = new ChromeDriver(options);
-	
+
 		if (MAXIMIZE) {
 			driver.manage().window().maximize();
 		}
 		driver.get(URL);
 		buscarElementoPorXPath(xPaths.divContainerCarregada);
 	}
-	
+
 	@Before
 	public void NavegarMenu() throws IOException, InterruptedException {
-	driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 
 	}
-	
-	
+
 	@Test
 	public void inclusaoDeUsuario() throws Exception {
 
 		buscarElementoPorXPath(xPaths.divContainerCarregada);
-		buscarElementoPorXPath(xPaths.menuFormulario).click();	
+		buscarElementoPorXPath(xPaths.menuFormulario).click();
 		buscarElementoPorXPath(xPaths.subMenuCriarUsuario).click();
 		validaElementoPorXPath(xPaths.botaoVoltar);
 		buscarElementoPorXPath(xPaths.campoNome).sendKeys("desafio01");
@@ -54,15 +53,14 @@ public class ManterUsuario extends AbstractPages {
 		buscarElementoPorXPath(xPaths.campoProfissao).sendKeys("Analista de Teste");
 		buscarElementoPorXPath(xPaths.campoGenero).sendKeys("Masculino");
 		buscarElementoPorXPath(xPaths.campoIdade).sendKeys("30");
-		validaElementoPorXPath(xPaths.botaoCriar);	
+		validaElementoPorXPath(xPaths.botaoCriar);
 		buscarElementoPorXPath(xPaths.botaoCriar).click();
 	}
 
-	
 	@Test
 	public void usuarioAlteracao() throws Exception {
 		buscarElementoPorXPath(xPaths.divContainerCarregada);
-		buscarElementoPorXPath(xPaths.subMenuListarUsuario).click();	
+		buscarElementoPorXPath(xPaths.subMenuListarUsuario).click();
 		// Editar Usuário
 		buscarElementoPorXPath(xPaths.botaoEditar).click();
 		buscarElementoPorXPath(xPaths.campoNome).clear();
@@ -72,16 +70,15 @@ public class ManterUsuario extends AbstractPages {
 		validaElementoPorXPath(xPaths.botaoSalvaAlteracao);
 		buscarElementoPorXPath(xPaths.botaoSalvaAlteracao).click();
 		buscarElementoPorXPath(xPaths.botaoVoltar).click();
-		
-		
+
 	}
-	
+
 	@Test
 	public void usuarioExclusao() throws Exception {
-		buscarElementoPorXPath(xPaths.menuFormulario).click();	
+		buscarElementoPorXPath(xPaths.menuFormulario).click();
 		buscarElementoPorXPath(xPaths.subMenuListarUsuario).click();
-		buscarElementoPorXPath(xPaths.botaoExcluir).click(); 
+		buscarElementoPorXPath(xPaths.botaoExcluir).click();
 		confirm();
 	}
-	
+
 }
