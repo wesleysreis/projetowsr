@@ -48,6 +48,7 @@ public class BuscaElementos extends AbstractPages {
 		// Radio Box e CheckBox
 		buscarElementoPorXPath(xPaths.radio01).click();
 		buscarElementoPorXPath(xPaths.checkbox01).click();
+		buscarElementoPorXPath(xPaths.botaoVoltar).click();
 	}
 	
 }
