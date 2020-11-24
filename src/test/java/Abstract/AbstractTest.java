@@ -107,7 +107,6 @@ public abstract class AbstractTest {
 	}
 
 	public static void esperaLoadingSpinner() {
-//WebElement loading = validaElementoPorBy(By.xpath(xPaths.loadingSpinner.getXpathValue()));
 		try {
 			WebElement loading = driver.findElement(By.xpath(xPaths.loadingSpinner.getXpathValue()));
 			if (loading != null) {
@@ -361,7 +360,7 @@ public abstract class AbstractTest {
 			esperaLoadingSpinner();
 			System.out.print("escrever no elemento ");
 		}
-//Solução para garantir campo vazio - Quando se queria o campo vazio a apliação não estava zerando o campor verdadeiramente
+		
 		if (texto.equals("") && !element.getAttribute("value").equals("")) {
 			String valor = element.getAttribute("value");
 			for (int i = 0; i < valor.length(); i++)
@@ -420,30 +419,22 @@ public abstract class AbstractTest {
 	}
 
 	public boolean cancelPrintPreview() {
-		// get the current time and add 180 seconds to wait for the print preview cancel
-		// button
+	
 		long endTime = System.currentTimeMillis() + 5000;
-		// switch to print preview window
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e2) {
 		}
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		WebDriverWait wait = new WebDriverWait(driver, 5);
-		// wait.until(driver -> driver.getWindowHandles().size() > 1);
-		// driver.switchTo().window((new ArrayList<String>
-		// (driver.getWindowHandles())).get(2));
 		while (true) {
 			try {
-				// get the cancel button
 				WebElement cancelButton = (WebElement) jse.executeScript(
 						"return document.querySelector('print-preview-app')." + "shadowRoot.querySelector('#sidebar')."
 								+ "shadowRoot.querySelector('print-preview-button-strip')."
 								+ "shadowRoot.querySelectorAll('cr-button')[1]");
 				if (cancelButton instanceof WebElement) {
-					// click on cancel
 					cancelButton.click();
-					// switch back to main window
 					driver.switchTo().window((new ArrayList<String>(driver.getWindowHandles())).get(1));
 					return true;
 				}
