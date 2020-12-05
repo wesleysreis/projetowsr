@@ -35,6 +35,25 @@ public class AbstractPages extends AbstractTest {
 		escreveEmElemento(xPaths.campoIdade, idade);
 	}
 
+	// BUSCA NO GOOGLE
+	public static void escrevecampoPesquisa(String pesquisa) {
+		escreveEmElemento(xPaths.campoPesquisa, pesquisa);
+		
+		}
+	// BOTÃO PESQUISAR
+		public static String clicarBotaoPesquisar() {
+			return clicaEmElemento(xPaths.clicaPesquisar);
+		}	
+	
+		public static String clicarNotebook() {
+			return clicaEmElemento(xPaths.clicaNotebook);
+		}	
+		
+		public static String clicarSelecaoNotebook() {
+			return clicaEmElemento(xPaths.clicaSelecaoNotebook);
+		}	
+		
+		
 	// MENU/SUBMENU
 	public static String clicarMenuFormulario() {
 		return clicaEmElemento(xPaths.menuFormulario);

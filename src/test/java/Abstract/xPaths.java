@@ -19,6 +19,20 @@ public enum xPaths {
 	campoProfissao("//*[@id=\"user_profile\"]"), campoGenero("//*[@id=\"user_gender\"]"),
 	campoIdade("//*[@id=\"user_age\"]"),
 
+	// AMERICANAS
+	campoPesquisa ("//*[@id=\"tsf\"]/div[2]/div[1]/div[1]/div/div[2]/input"),
+	clicaPesquisar("//*[@id=\"tsf\"]/div[2]/div[1]/div[3]/center/input[1]"),
+	clicaNotebook ("//*[@id=\"list-level-1\"]/li[5]/a"),
+	clicaSelecaoNotebook ("//*[@id=\"content-middle\"]/div[3]/div/div/section/section/div/div/div/div/div/div/div/div[1]/div/section/a/div[2]/h3"),
+	escreverCEP ("//*[@id=\"root\"]/div/div[3]/div[2]/div[2]/form/div/div[1]/input"),
+	botaoFechar("//*[@id=\"lgpd-accept\"]"),
+	botaoCalcularFrete("//*[@id=\"root\"]/div/div[3]/div[2]/div[2]/form/div/div[2]/button"),
+	botaoComprar ("//*[@id=\"buy-button\"]"),
+	
+	botaoModalConfirmarComprar("//*[@id=\"root\"]/div[2]/div/div/div/div[2]/a[2]"),
+	
+	
+	
 	// BOTÕES DE NAVEGAÇÃO
 	botaoVoltar("//*[(self::button or self::a) and contains(text(), 'Voltar')]"),
 	botaoCriar("//*[@id=\"new_user\"]/div[5]/div/div"),
@@ -26,13 +40,14 @@ public enum xPaths {
 	botaoEditar("/html/body/div[3]/div/table/tbody/tr[1]/td[10]/a"),
 	botaoNovoUsuario("/html/body/div[2]/div[3]/div/a[1]"),
 	botaoSalvaAlteracao("//*[(self::button or self::a) and contains(text(), 'Criar')]"),
-
+	botaoContinuar ("//*[@id=\"btn-continue\"]/div/span"), 
+	
 	// RADIO - CHECKBOX
 	radio01("/html/body/div[2]/div[2]/div[3]/div[1]/form/p[1]/label"),
 	checkbox01("/html/body/div[2]/div[2]/div[3]/div[2]/p[1]/label"),
 
 	// TELA FORMULÁRIO
-	divContainerCarregada("/html/body/div[2]/div[1]"),
+	divContainerCarregada("//*[@id=\"root\"]/div"),
 
 	// MENSAGENS DE SISTEMA
 	popUpMensagemSistema("//*[@id='messageContainer_1']/ul/ul/div"),

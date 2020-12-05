@@ -62,9 +62,9 @@ public abstract class AbstractTest {
 	private static final Integer RETRY_COUNT = 3;
 
 	protected static final Boolean MAXIMIZE = Boolean.TRUE;
-	private static final Integer WAIT_PADRAO = 10;
-	private static final Integer WAIT_CHECAGEM = 4;
-	private static final Integer WAIT_VALIDACAO = 1;
+	private static final Integer WAIT_PADRAO = 0;
+	private static final Integer WAIT_CHECAGEM = 0;
+	private static final Integer WAIT_VALIDACAO = 0;
 	public static final Integer RETRY_MILLISECONDS = 300;
 
 	@Rule
